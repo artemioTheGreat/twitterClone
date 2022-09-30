@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import "./layout.scss";
 
 const Layout = props => {
@@ -6,16 +8,19 @@ const Layout = props => {
         <>
             <Navbar/>
 
-                <div className="container py-4">
+                <div className="main">
 
-                    <div className="row">
+                    <div className="container">
 
-                        <div className="front-card col-xs-10 col-xs-offset-1">
+                        <div className="row">
 
-                        <Welcome />
-                        <Login/>
-                            {props.children}
-
+                            <div className="front-card col-xs-10 col-xs-offset-1">
+                                <Welcome />
+                                <Login/>
+                                <Signup/>
+                   
+                                    {props.children}
+                            </div>
                         </div>
 
                     </div>
@@ -31,7 +36,7 @@ const Navbar = props => {
             <div className="container">
                 <div className="navbar-header">
                     <a className="navbar-brand" href="#">
-                        <i className="fa fa-twitter"></i>
+                        <FontAwesomeIcon icon={faTwitter} size="2x"  className="twitter-small-icon"/>
                     </a>
                 </div>
                 <ul className="nav navbar-nav navbar-right">
@@ -45,6 +50,7 @@ const Navbar = props => {
                             <li className="col-xs-12"><a href="#">Italian</a></li>
                         </ul>
                     </li>
+                    
                 </ul>
             </div>
         </nav>
@@ -75,6 +81,35 @@ const Login = props => {
     )
 }
 
+const Signup = props => {
+    return(
+        <div className="sign-up col-xs-4 col-xs-offset-1">
+            <form>
+                
+                <div className="new-to-t">
+                    <p><strong>New to Twitter?</strong><br></br><span>Sign Up</span></p>
+                </div>
+
+                <div className="form-group">
+                    <input type="text" class="form-control username" placeholder="Username"/>
+                </div>
+
+                <div className="form-group">
+                    <input type="email" class="form-control email" placeholder="Email"/>
+                </div>
+
+                <div className="form-group">
+                    <input type="password" className="form-control password" placeholder="Password" />
+                </div>
+
+                <br></br>
+
+                <button id="sign-up-btn" className="btn btn-default btn-warning pull-right">Sign up for Twitter</button>
+            </form>
+        </div>
+    )
+}
+
 const Welcome = props => {
     return (
         <div className="col-xs-6 welcome">
@@ -87,8 +122,6 @@ const Welcome = props => {
         </div>
     )
 }
-
-
 
 
 export default Layout
