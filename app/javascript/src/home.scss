@@ -4,15 +4,17 @@
 
 body {
     min-width: 900px;
-  }
-  
-  .main {
-    background-image: url(../../../app/assets/images/background1.jpg);
+    background-image: url(../../../app/assets/images/background_3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 120vh;
+    min-width: 100vw;
+  }
+  
+  #homeback {
     min-height: 100vh;
     min-width: 100vw;
-    position: fixed;
+    position: relative;
   }
   
   .navbar {
@@ -99,20 +101,13 @@ body {
     text-shadow: 0 1px 0 rgba(255,255,255,0.5);
   }
 
-  .welcome, .welcome a {
+  .welcome, .welcome a, #footer {
     color: #fff;
   }
-  
-  #welcome-text {
-    height: 200px;
+
+  #footer {
+    font-size: 17px;
   }
   
-  #welcome-text h1 {
-    margin-top: 0;
-    margin-bottom: 30px;
-  }
-  
-  #welcome-text p {
-    font-size: 20px;
-  }
+
   
