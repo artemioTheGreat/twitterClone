@@ -1,6 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faLinkedin, faInstagram, faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faLinkedin, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
+import Login from "./loginSignupGuestsComponent/login";
+import Signup from "./loginSignupGuestsComponent/signup";
+
 
 import "./layout.scss";
 
@@ -58,59 +61,6 @@ const Navbar = props => {
                 </ul>
             </div>
         </nav>
-    )
-}
-
-const Login = props => {
-    return(
-        <div className="log-in col-xs-4 col-xs-offset-1">
-            <form>
-                <div className="form-group">
-                    <input type="text" className="form-control username" placeholder="Username"/>
-                </div>
-                <div className="form-group">
-                    <input type="text" class="form-control password" placeholder="Password"/>
-                </div>
-                <br/>
-                <button id="log-in-btn" className="btn btn-default btn-primary col-xs-3 col-xs-3 col-xs-offset-1">Log in</button>
-                <br></br>
-                <label>
-                    <input type="checkbox"/>
-                    <span>Remember me</span>
-                    <span> &#183; </span>
-                </label>
-                    <a href="#">Forgot password?</a>
-            </form>
-        </div>
-    )
-}
-
-const Signup = props => {
-    return(
-        <div className="sign-up col-xs-4 col-xs-offset-1">
-            <form>
-                
-                <div className="new-to-t">
-                    <p><strong>New to Twitter?</strong><br></br><span>Sign Up</span></p>
-                </div>
-
-                <div className="form-group">
-                    <input type="text" class="form-control username" placeholder="Username"/>
-                </div>
-
-                <div className="form-group">
-                    <input type="email" class="form-control email" placeholder="Email"/>
-                </div>
-
-                <div className="form-group">
-                    <input type="password" className="form-control password" placeholder="Password" />
-                </div>
-
-                <br></br>
-
-                <button id="sign-up-btn" className="btn btn-default btn-warning pull-right">Sign up for Twitter</button>
-            </form>
-        </div>
     )
 }
 
@@ -173,7 +123,7 @@ const Footer = () => {
            
 
           <div className="text-center">
-               <p>Full Stack Twitter Clone project at<a href="https://www.altcademy.com/" target="_blank" rel="noopener noreferrer"> Altcademy</a></p>
+               <p>Full Stack Twitter Clone assignment at<a href="https://www.altcademy.com/" target="_blank" rel="noopener noreferrer"> Altcademy</a></p>
          </div>
 
           
