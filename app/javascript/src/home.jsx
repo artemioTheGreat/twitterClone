@@ -1,13 +1,57 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Layout from './layout';
+import { handleErrors } from '@utils/fetchHelper';
 import './home.scss';
 
-const Home = props => (
-  <h1>Home page react is working alright baby boys and girls</h1>
-)
+class Home extends React.Component {
 
-ReactDOM.render(
-    <Layout/>,
+    constructor(props) {
+      super(props); 
+
+      state = {
+        authenticated: false,
+        username: "",
+        email: "",
+      }
+
+    }
+
+  componentDidMount() {
+    fetch('/api/authenticated') 
+    .then(handleErrors)
+    .then(data => {
+      this.setState({
+        authenticated: data.authenticated,
+        username: data.username,
+        email: data.email,
+      })
+    })
+  }
+
+  render() {
+    const {authenticated, username, email } = this.state;
+
+    if (authenticated) {
+      return(
+          <User user_id={this.props.user_id} username={username} email={email} />
+      );
+    };
+    
+      return(
+        <Layout />
+      )
+      
+    }
+
+
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  ReactDOM.render(
+    <Home/>,
     document.body.appendChild(document.createElement('div')),
 )
+
+})
