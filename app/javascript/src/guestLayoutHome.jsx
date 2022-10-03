@@ -5,8 +5,6 @@ import Login from "./loginSignupGuestsComponent/login";
 import Signup from "./loginSignupGuestsComponent/signup";
 
 
-import "./layout.scss";
-
 const Layout = props => {
     return(
         <>

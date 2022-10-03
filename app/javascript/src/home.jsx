@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from './layout';
+import Layout from './guestLayoutHome';
 import { handleErrors } from '@utils/fetchHelper';
+import UserHomeLayout from './userComponents/userHome';
 import './home.scss';
 
 class Home extends React.Component {
@@ -9,7 +10,7 @@ class Home extends React.Component {
     constructor(props) {
       super(props); 
 
-      state = {
+      this.state = {
         authenticated: false,
         username: "",
         email: "",
@@ -34,7 +35,7 @@ class Home extends React.Component {
 
     if (authenticated) {
       return(
-          <User user_id={this.props.user_id} username={username} email={email} />
+          <UserHomeLayout user_id={this.props.user_id} username={username} email={email} />
       );
     };
     
