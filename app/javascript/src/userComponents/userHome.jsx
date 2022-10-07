@@ -4,7 +4,7 @@ import RightBox from './rightBox';
 import UserHomeFeed from './userHomeFeeds';
 import "../home.scss";
 
-class UserHomeLayout extends React.Component {
+class UserHome extends React.Component {
     constructor(props) {
         super(props);
 

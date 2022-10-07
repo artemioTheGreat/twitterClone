@@ -1,6 +1,7 @@
 import React from 'react';
 import { safeCredentials, handleErrors } from '@utils/fetchHelper';
-
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 class Signup extends React.Component {
     
@@ -38,9 +39,9 @@ class Signup extends React.Component {
         .then(handleErrors)
         .then(data => {
             this.setState({
-                username: "",
                 email: "",
                 password: "",
+                username: "",
                 success: 'Sign up success!. You are now allowed to Log in.'
             })
         })
@@ -56,31 +57,26 @@ class Signup extends React.Component {
         const { username, email, password, success, error } = this.state;
 
         return(
-            <div className="sign-up col-xs-4 col-xs-offset-1">
-                <form onSubmit={thi.signup}>
-                    
-                    <div className="new-to-t">
-                        <p><strong>New to Twitter?</strong><br></br><span>Sign Up</span></p>
-                    </div>
-
-                    <div className="form-group">
-                        <input type="text" class="form-control username" placeholder="Username" name="username" value={username} onChange={this.handleChange}/>
-                    </div>
-
-                    <div className="form-group">
-                        <input type="email" class="form-control email" placeholder="Email" name='email' value={email} onChange={this.handleChange}/>
-                    </div>
-
-                    <div className="form-group">
-                        <input type="password" className="form-control password" placeholder="Password" name='password' value={password} onChange={this.handleChange} />
-                    </div>
-
-                    <br></br>
-
-                    <button id="sign-up-btn" className="btn btn-default btn-warning pull-right">Sign up for Twitter</button>
-                    {success && <p className='text-success mt-2'>{success}</p>}
-                    {error && <p className='text-danger mt-2'>{error}</p>}
-                </form>
+            <div className="p-3 log-in-sign-up-background rounded">
+                <h6 className="my-3"><b>Join Twitter today</b></h6>
+                    <Form onSubmit={this.signup}>
+                        <Form.Group className="mb-3">
+                            <Form.Control type="username" placeholder="Username" name="username" value={username} onChange={this.handleChange} />
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Control type="email" placeholder="Email" name="email" value={email} onChange={this.handleChange} />
+                        </Form.Group>
+                        <Form.Group className="mb-4">
+                            <Form.Control type="password" placeholder="Password" name="password" value={password} onChange={this.handleChange} />
+                        </Form.Group>
+                        <div className="d-grid gap-2">
+                            <Button type="submit" variant="primary" size="sm" className="sign-up-button">
+                            Sign up
+                            </Button>
+                        </div>
+                            {success && <p className="text-success mt-2">{success}</p>}
+                            {error && <p className="text-danger mt-2">{error}</p>}
+                    </Form>
             </div>
             )
     }

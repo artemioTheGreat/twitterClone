@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Layout from './guestLayoutHome';
 import { handleErrors } from '@utils/fetchHelper';
-import UserHomeLayout from './userComponents/userHome';
+import UserHome from './userComponents/userHome';
 import './home.scss';
 
 class Home extends React.Component {
@@ -35,7 +35,7 @@ class Home extends React.Component {
 
     if (authenticated) {
       return(
-          <UserHomeLayout user_id={this.props.user_id} username={username} email={email} />
+          <UserHome user_id={this.props.user_id} username={username} email={email} />
       );
     };
     

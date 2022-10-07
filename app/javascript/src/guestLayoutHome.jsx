@@ -128,7 +128,5 @@ const Footer = () => {
     </div>     
     );
 };
-  
-
 
 export default Layout
