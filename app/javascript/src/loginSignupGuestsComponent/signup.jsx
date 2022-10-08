@@ -9,11 +9,11 @@ class Signup extends React.Component {
         super(props);
 
         this.state = {
-            email: "",
-            username: "",
-            password: "",
-            success: "",
-            error: "",
+            email: '',
+            username: '',
+            password: '',
+            success: '',
+            error: '',
         }
     }
 
@@ -39,9 +39,9 @@ class Signup extends React.Component {
         .then(handleErrors)
         .then(data => {
             this.setState({
-                email: "",
-                password: "",
-                username: "",
+                email: '',
+                password: '',
+                username: '',
                 success: 'Sign up success!. You are now allowed to Log in.'
             })
         })
