@@ -29,7 +29,7 @@ class RightBox extends React.Component {
     trendsForYouStats = [
         {
             id: 1,
-            topic: "coding",
+            topic: "Coding",
             hashtag: "fullStackWebDevelopment",
             numberOfTweets: "12.7K",
         },
@@ -96,7 +96,7 @@ class RightBox extends React.Component {
                                     
                                     <div className="col">
                                         <span>{tweet.topic}</span>
-                                        <span>• Trending</span>
+                                        <span> • Trending</span>
                                     </div>
                                     
                                     <div className="col">

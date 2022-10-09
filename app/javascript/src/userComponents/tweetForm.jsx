@@ -71,7 +71,7 @@ class TweetForm extends React.Component {
                     </div>
 
                     <div className="col d-flex justify-content-end">
-                        <button type="submit" className="btn btn-tweet"><b>Tweet</b></button>
+                        <button type="submit" className="btn btn-tweet btn-primary"><b>Tweet</b></button>
                     </div>    
                 </div>
                 {error && <p className="text-danger mt-2">{error}</p>}

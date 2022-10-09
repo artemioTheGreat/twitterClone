@@ -23,8 +23,8 @@ class LeftBox extends React.Component {
                     authenticated: false,
                 })
                 const params = new URLSearchParams(window.location.search);
-                const redirect = params.get('redirect_url') || '/';
-                window.location = redirect.url;
+                const redirect_url = params.get('redirect_url') || '/';
+                window.location = redirect_url;
             }
         })
         .catch(error => {
@@ -44,31 +44,31 @@ class LeftBox extends React.Component {
                     <ul className="navbar-nav">
                         
                         <li className="nav-item active">
-                            <a className="nav-link" href="/"><span><FontAwesomeIcon icon={faHome} className='nav-icon' />Home</span></a>
+                            <a className="nav-link" href="/"><span><FontAwesomeIcon icon={faHome} className='nav-icon' /> Home</span></a>
                         </li>
 
                         <li className="nav-item">
-                             <a className="nav-link" href="#"><span><FontAwesomeIcon icon={faHashtag} className="nav-icon" />Explore</span></a>
+                             <a className="nav-link" href="#"><span><FontAwesomeIcon icon={faHashtag} className="nav-icon" /> Explore</span></a>
                         </li>
                         
                         <li className="nav-item">
-                            <a className="nav-link" href="#"><span><FontAwesomeIcon icon={faBell} className="nav-icon" />Notifications</span></a>
+                            <a className="nav-link" href="#"><span><FontAwesomeIcon icon={faBell} className="nav-icon" /> Notifications</span></a>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#"><span><FontAwesomeIcon icon={faEnvelope} className="nav-icon" />Messages</span></a>
+                            <a className="nav-link" href="#"><span><FontAwesomeIcon icon={faEnvelope} className="nav-icon" /> Messages</span></a>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#"><span><FontAwesomeIcon icon={faBookmark} className="nav-icon" />Bookmarks</span></a>
+                            <a className="nav-link" href="#"><span><FontAwesomeIcon icon={faBookmark} className="nav-icon" /> Bookmarks</span></a>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#"><span><FontAwesomeIcon icon={faRectangleList} className="nav-icon" />Lists</span></a>
+                            <a className="nav-link" href="#"><span><FontAwesomeIcon icon={faRectangleList} className="nav-icon" /> Lists</span></a>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#"><span><FontAwesomeIcon icon={faUser} className="nav-icon" />Profile</span></a>
+                            <a className="nav-link" href="#"><span><FontAwesomeIcon icon={faUser} className="nav-icon" /> Profile</span></a>
                         </li>
 
                         <li className="nav-item">
@@ -76,7 +76,7 @@ class LeftBox extends React.Component {
                             <span className="fa-layers fa-fw nav-icon-layer">
                             <FontAwesomeIcon icon={faCircle} className="nav-icon" />
                             <FontAwesomeIcon icon={faEllipsis} transform="shrink-2" className="nav-icon" />
-                            </span>More</span></a>
+                            </span> More</span></a>
                         </li>
 
                     </ul>
@@ -95,8 +95,9 @@ class LeftBox extends React.Component {
                             <h6>{email}</h6>
                             </div>
                         </div>
+                     
                         <form onSubmit={this.logout} className="d-flex justify-content-center">
-                            <button type="submit" variant="link" size="sm">
+                            <button className="btn-primary btn-sm rounded-pill" type="submit" variant="link" size="sm">
                             Log out @{username}
                             </button>
                         </form>

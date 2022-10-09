@@ -19,11 +19,8 @@ const Layout = props => {
 
                                 <div className="front-card col-xs-10 col-xs-offset-1">
                                     <Welcome />
-                                    <Login/>
-                                    <Signup/>
+                                    <LoginSignUp/>
                                     <Footer/>
-
-                                        {props.children}
                                 </div>
                             </div>
 
@@ -44,19 +41,6 @@ const Navbar = props => {
                         <FontAwesomeIcon icon={faTwitter} size="2x"  className="twitter-small-icon"/>
                     </a>
                 </div>
-                <ul className="nav navbar-nav navbar-right">
-                    <li className="dropdown">
-                        <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">language: <strong>English </strong><span className="caret"></span></a>
-                        <ul className="dropdown-menu row" role="menu">
-                            <li className="col-xs-12"><a href="#">Filipino</a></li>
-                            <li className="col-xs-12"><a href="#">Spanish</a></li>
-                            <li className="col-xs-12"><a href="#">Russian</a></li>
-                            <li className="col-xs-12"><a href="#">Portuguese</a></li>
-                            <li className="col-xs-12"><a href="#">Italian</a></li>
-                        </ul>
-                    </li>
-                    
-                </ul>
             </div>
         </nav>
     )
@@ -64,7 +48,7 @@ const Navbar = props => {
 
 const Welcome = props => {
     return (
-        <div className="col-xs-6 welcome">
+        <div className="col-xs-6 py-4 welcome">
             <div id="welcome-text">
             <h1><strong>Welcome to Twitter.</strong></h1>
             <p>Connect with your friends &#8212; and other fascinating people.</p>
@@ -75,10 +59,38 @@ const Welcome = props => {
     )
 }
 
+const LoginSignUp = props => {
+    return(
+        <div className="row g-0 mb-4 pb-4">
+          
+          <div className="col">
+            <div>
+              <div className="row g-0">
+                
+               
+                <div className="col-12">
+                  <div className="p-1">
+                    <div className="row">
+                      <div className="col-6"> 
+                        <Login />
+                      </div>
+                      <div className="col-6">
+                        <Signup />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    )
+}
+
 const Footer = () => {
     return (
       <div id="footer">
-              <div className="text-center ms-4 pt-3">
+              <div className="text-center ms-4 pt-2 py-4">
                     © <a href="https://confident-murdock-8e5bba.netlify.app/"
                         target="_blank"rel="noopener noreferrer">
                         <em>Francis Artemio Landia </em>
@@ -129,4 +141,4 @@ const Footer = () => {
     );
 };
 
-export default Layout
+export default Layout;

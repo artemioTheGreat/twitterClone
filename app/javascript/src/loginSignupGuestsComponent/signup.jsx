@@ -74,7 +74,7 @@ class Signup extends React.Component {
                             Sign up
                             </Button>
                         </div>
-                            {success && <p className="text-success mt-2">{success}</p>}
+                            {success && <p className="text-warning mt-2">{success}</p>}
                             {error && <p className="text-danger mt-2">{error}</p>}
                     </Form>
             </div>
