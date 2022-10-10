@@ -6,12 +6,12 @@ import Form from 'react-bootstrap/Form';
 class Signup extends React.Component {
     
     constructor(props) {
-        super(props);
+        super(props)
 
         this.state = {
             email: '',
-            username: '',
             password: '',
+            username: '',
             success: '',
             error: '',
         }
@@ -38,12 +38,15 @@ class Signup extends React.Component {
         }))
         .then(handleErrors)
         .then(data => {
-            this.setState({
-                email: '',
-                password: '',
-                username: '',
-                success: 'Sign up success!. You are now allowed to Log in.'
-            })
+            console.log("data:", data);
+     
+                this.setState({
+                    email: '',
+                    password: '',
+                    username: '',
+                    success: 'Sign up success!. You are now allowed to Log in.'
+                })
+            
         })
         .catch(error => {
             this.setState({
