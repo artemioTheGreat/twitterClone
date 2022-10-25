@@ -4,5 +4,6 @@ class StaticPagesController < ApplicationController
   end
 
   def userpage
+    render 'userFeedsPage'
   end
 end

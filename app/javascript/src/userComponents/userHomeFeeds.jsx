@@ -21,7 +21,7 @@ class UserHomeFeed extends React.Component {
         fetch('/api/tweets')
         .then(handleErrors)
         .then(data => {
-            console.log(data);
+            console.log('data', data);
             this.setState({
                 tweets: data.tweets,
             })

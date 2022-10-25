@@ -39,14 +39,12 @@ class Signup extends React.Component {
         .then(handleErrors)
         .then(data => {
             console.log("data:", data);
-     
                 this.setState({
                     email: '',
                     password: '',
                     username: '',
                     success: 'Sign up success!. You are now allowed to Log in.'
                 })
-            
         })
         .catch(error => {
             this.setState({

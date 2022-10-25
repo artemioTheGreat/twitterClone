@@ -6,7 +6,7 @@ class TweetForm extends React.Component {
         super(props); 
 
         this.state = { 
-            message: '',
+            msg: '',
             selectedFile: null,
             error: '',
         }
@@ -21,14 +21,14 @@ class TweetForm extends React.Component {
     onFileSelect = e => {
         this.setState({
             [e.target.name]: e.target.files[0],
-        })
+        });
     }
 
     submitTweet = e => {
         e.preventDefault();
 
         let formData = new FormData();
-        formData.append('tweet[image]', this.state.message);
+        formData.append('tweet[message]', this.state.msg);
         if(this.state.selectedFile !== null) {
             formData.append('tweet[image]', this.state.selectedFile, this.state.selectedFile.name);
         }
@@ -42,27 +42,28 @@ class TweetForm extends React.Component {
             const tweetForm = document.querySelector('textarea#tweet');
             tweetForm.value = ""
             const tweetFormFile = document.querySelector('input#file-select');
-            tweetFormFile.value = ""
+            tweetFormFile.value = ''
             this.props.getAllTweets();
             this.setState({
-                message: "",
+                msg: '',
                 selectedFile: null,
             })
+           
         })
         .catch(error => {
             this.setState({
-                error: 'Your tweet is not posted. Try again.',
+              error: 'Sorry your tweet is not posted. Try again.',
             })
-        })
+          })
     };
 
     render() {
-        const {message, error} = this.state;
+        const {msg, error} = this.state;
         
         return(
             <form onSubmit={this.submitTweet}>
                 <div className="mb-2">
-                    <textarea className="form-control" id="tweet" rows="3" placeholder="What's happening?" name="message" value={message} onChange={this.handleChange}></textarea>
+                    <textarea className="form-control" id="tweet" rows="3" placeholder="What's happening?" name="msg" value={msg} onChange={this.handleChange}></textarea>
                 </div>
                 
                 <div className="form-group row g-0">

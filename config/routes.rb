@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
  
+  get '/:username'                 => 'static_pages#userFeedsPage'
+  
   namespace :api do
     # USERS
     post '/users'                  => 'users#create'
@@ -20,5 +22,4 @@ Rails.application.routes.draw do
 
   #get '*path' => 'static_pages#home'
 
-  # if you are using active storage to upload and store images, comment the above line
 end
