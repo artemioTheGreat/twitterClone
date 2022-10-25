@@ -68,7 +68,7 @@ class LeftBox extends React.Component {
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#"><span><FontAwesomeIcon icon={faUser} className="nav-icon" /> Profile</span></a>
+                            <a className="nav-link" href={`/${username}`}><span><FontAwesomeIcon icon={faUser} className="nav-icon" /> Profile</span></a>
                         </li>
 
                         <li className="nav-item">
