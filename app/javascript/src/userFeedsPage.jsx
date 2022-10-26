@@ -6,7 +6,6 @@ import UserTweets from '@src/userComponents/userTweets';
 import Layout from '@src/guestLayoutHome';
 import { handleErrors } from '@utils/fetchHelper';
 
-// Importing FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
@@ -28,7 +27,7 @@ class UserPage extends React.Component {
     fetch('/api/authenticated')
     .then(handleErrors)
     .then(data => {
-      // console.log('data', data)
+       console.log('data', data)
       this.setState({
         authenticated: data.authenticated,
         username: data.username,
@@ -84,10 +83,11 @@ class UserPage extends React.Component {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
- 
+  const node = document.getElementById('params');
+  const data = JSON.parse(node.getAttribute('data-params'));
 
   ReactDOM.render(
-    <UserPage />,
+    <UserPage username={data.username}/>,
     document.body.appendChild(document.createElement('div')),
   )
 })

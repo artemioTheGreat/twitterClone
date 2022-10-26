@@ -24,9 +24,216 @@
     font-size: 24px;
 }
 
-  #footer {
+#footer {
     font-size: 17px;
-  }
+}
+
+// --- Signin and Signup Widgets --- //
+
+.log-in-sign-up-background {
+  background-color: #F7F9F9;
+  min-height: 300px;
+}
+
+.log-in-button {
+  background-color: #1DA1F2;
+  border: #1DA1F2;
+}
+
+.sign-up-button {
+  color: #1DA1F2;
+  border: 1px solid #1DA1F2;
+  background-color: #fff;
+}
+
+// --- End of Guest Components ----//
+
+
+// --- Start of User Components --- //
+
+// --- User Component --- //
+
+.feed-inner {
+  border-left: 1px solid #f6f9f9;
+  border-right: 1px solid #f6f9f9;
+}
+
+// --- LeftBanner Component --- //
+
+.left-banner {
+  height: 100%;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.navbar {
+  align-items: flex-start;
+}
+
+.left-banner nav span {
+  color: #141923;
+  display: inline-flex;
+  vertical-align: middle;
+  padding: 8px 25px 8px 10px;
+}
+
+.left-banner nav span:hover {
+  background-color: #e7e7e8;
+  border-radius: 50px;
+}
+
+.nav-icon {
+  padding-right: 20px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  align-self: center;
+}
+
+.nav-icon-layer {
+  margin-right: 12px;
+  height: 30px;
+}
+
+.user-logout h6 {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.user-logout button {
+  color: #536571;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.user-logout button:hover {
+  text-decoration: underline;
+  color: #536571;
+}
+
+// --- RightBanner Component --- //
+
+.right-banner {
+  height: 100%;
+  position: fixed;
+}
+
+.search-bar-background {
+  background-color: #eff3f4;
+  border-radius: 50px;
+}
+
+.right-banner .input-group-text, .right-banner .form-control {
+  background-color: transparent;
+  border: none;
+}
+
+.search-bar-icon {
+  color: #536571;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+  color: #536571;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.search-bar-help {
+  font-size: 15px;
+  padding: 8px;
+  text-align: center;
+  color: #536571;
+  border: 1px solid #536571;
+  border-radius: 16px;
+}
+
+.right-banner-box {
+  padding: 4px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  background-color: #F7F9F9;
+}
+
+.right-banner-box h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.right-banner-box h6 {
+  font-size: 15px;
+}
+
+.whats-happening-tweet span {
+  font-size: 13px;
+  color: #536571;
+}
+
+.btn-follow {
+  font-size: 14px;
+  border-radius: 16px;
+}
+
+.circle-grey {
+  color: #e7e7e8;
+}
+
+// --- TweetForm Component --- //
+
+.btn-tweet {
+  color: #fff;
+  background-color: #1DA1F2;
+  border-radius: 50px;
+}
+
+.btn-tweet:hover {
+  color: #fff;
+  background-color: #1A8CD8;
+}
+
+// --- Tweets & UserTweets Component --- //
+
+.tweet-inner {
+  border-top: 1px solid #f6f9f9;
+  border-bottom: 1px solid #f6f9f9;
+}
+
+.tweet-name, .tweet-username, .tweet-time {
+  font-size: 15px;
+  margin-right: 4px;
+}
+
+.tweet-username, .tweet-time {
+  color: #536571;
+  text-decoration: none;
+}
+
+.tweet-username:hover {
+  color: #536571;
+  text-decoration: underline;
+}
+
+.tweet-image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 15px;
+}
+
+.btn-delete {
+  color: #1DA1F2;
+  text-decoration: none;
+  padding: 0;
+}
+
+.btn-delete:hover {
+  color: #1A8CD8;
+  text-decoration: underline;
+}
+
+// --- End of User Components ----//
   
 
 

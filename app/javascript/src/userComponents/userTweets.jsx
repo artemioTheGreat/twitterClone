@@ -79,14 +79,14 @@ class UserTweets extends React.Component {
                                             </div>
 
                                             {(tweet.username == this.props.currentUsername)
-                                            ? <button className="btn btn-link btn-delete" onClick={this.deleteTweet}></button> : <div></div>
+                                            ? <button className="btn btn-link btn-delete" onClick={this.deleteTweet}>Delete</button> : <div></div>
                                             }
 
                                         </div>
                                         <div className='col py-1'>
                                             <span>{tweet.message}</span>
                                             {(tweet.image !== null) ? <div>
-                                                <img src={tweet.image} alt='Image' />
+                                                <img className='img-fluid' src={tweet.image} alt='Image' />
                                             </div> : <div></div>}
                                         </div>
                                     </div>
