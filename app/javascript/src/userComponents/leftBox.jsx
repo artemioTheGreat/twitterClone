@@ -76,7 +76,8 @@ class LeftBox extends React.Component {
                             <span className="fa-layers fa-fw nav-icon-layer">
                             <FontAwesomeIcon icon={faCircle} className="nav-icon" />
                             <FontAwesomeIcon icon={faEllipsis} transform="shrink-2" className="nav-icon" />
-                            </span> More</span></a>
+                            
+                            </span>More</span></a>
                         </li>
 
                     </ul>
@@ -92,7 +93,6 @@ class LeftBox extends React.Component {
                             </div>
                             <div className="col">
                             <h6>@{username}</h6>
-                            <h6>{email}</h6>
                             </div>
                         </div>
                      

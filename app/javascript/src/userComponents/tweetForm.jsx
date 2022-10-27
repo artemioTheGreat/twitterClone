@@ -39,16 +39,17 @@ class TweetForm extends React.Component {
         }))
         .then(handleErrors)
         .then(data => {
+           
             const tweetForm = document.querySelector('textarea#tweet');
             tweetForm.value = ""
             const tweetFormFile = document.querySelector('input#file-select');
             tweetFormFile.value = ''
-            this.props.getAllTweets();
+           
             this.setState({
                 msg: '',
                 selectedFile: null,
             })
-           
+            this.props.getAllTweets();
         })
         .catch(error => {
             this.setState({

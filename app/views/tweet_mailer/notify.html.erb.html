@@ -12,7 +12,7 @@
       <%= @tweet.message %>
 
       <% if @tweet.image.attached? %>
-        <%= image_tag url_for(@tweet.image) %>
+        <%= image_tag @tweet.image %>
       <% end %>
     </p>
     <p>Thanks for joining and have a great day!</p>

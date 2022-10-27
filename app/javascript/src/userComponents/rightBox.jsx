@@ -14,7 +14,7 @@ class RightBox extends React.Component {
 
     showSearchResultMethod = () => {
 
-        const inputFocus = document.querySelector('right-box-above .input-group');
+        const inputFocus = document.querySelector('.right-box-above .input-group');
         
         if(!this.state.showSearchResult) {
             inputFocus.classList.add('focus')   
@@ -82,7 +82,7 @@ class RightBox extends React.Component {
                     </div>
                 </div>
 
-                {this.state.showSearchResult ? (<div id="searchResults"><p className="search-bar-help">Try searching for any trending topics</p></div>) : (<div></div>)
+                {this.state.showSearchResult ? (<div id="searchResults"><p className="search-bar-help">Search for any trending topic today</p></div>) : (<div></div>)
                 }
 
                 <div className="right-box-middle">

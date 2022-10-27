@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     get  '/tweets'                 => 'tweets#index'
     delete '/tweets/:id'           => 'tweets#destroy'
     get  '/users/:username/tweets' => 'tweets#index_by_user'
-    get  '/tweets/search/:keyword' => 'tweets#search'
+    #get  '/tweets/search/:keyword' => 'tweets#search' -> I'll add this one next time.
   end
 
   #get '*path' => 'static_pages#home'
