@@ -91,6 +91,9 @@ const Footer = () => {
     return (
       <div id="footer">
               <div className="text-center ms-4 pt-2 py-4">
+                    <div>
+                        <h6>Full-Stack Twitter Clone by</h6>
+                    </div>
                     © <a href="https://confident-murdock-8e5bba.netlify.app/"
                         target="_blank"rel="noopener noreferrer">
                         <em>Francis Artemio Landia </em>
@@ -130,13 +133,7 @@ const Footer = () => {
                    
                    
               </div>
-           
-
-          <div className="text-center">
-               <p>Full Stack Twitter Clone assignment at<a href="https://www.altcademy.com/" target="_blank" rel="noopener noreferrer"> Altcademy</a></p>
-         </div>
-
-          
+   
     </div>     
     );
 };
