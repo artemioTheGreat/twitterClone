@@ -1,13 +1,18 @@
+database:
+  - name: twitterCloneDb
+    databaseName: twitter_clone_db
+    user: twitter_clone_db_user
+
 services:
   - type: web
-    name: fswd-twitter-clone
+    name: twitterCloneService
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: lessons
+          name: twitterCloneDb
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
